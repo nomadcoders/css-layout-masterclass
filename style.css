@@ -1,7 +1,9 @@
 .father {
   display: flex;
-  flex-direction: row;
+  height: 100vh;
   gap: 10px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .box {
