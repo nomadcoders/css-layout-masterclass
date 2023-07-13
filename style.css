@@ -1,10 +1,9 @@
 .father {
   display: flex;
   height: 100vh;
-  flex-direction: column;
+
   gap: 10px;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-start;
 }
 
 .box {
