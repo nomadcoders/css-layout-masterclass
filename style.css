@@ -1,17 +1,18 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .father {
   display: flex;
   height: 100vh;
-  row-gap: 10px;
-  column-gap: 20px;
   justify-content: center;
   flex-flow: row wrap;
-  align-items: center;
 }
 
 .box {
-  width: 200px;
   height: 200px;
-  background-color: tomato;
   color: white;
   font-size: 36px;
   display: flex;
@@ -20,19 +21,11 @@
 }
 
 .box:first-child {
-  align-self: flex-start;
+  background-color: tomato;
+  flex-grow: 1;
 }
 
 .box:last-child {
-  align-self: flex-end;
+  background-color: teal;
+  flex-grow: 5;
 }
-
-/* .box:nth-child(3) {
-  background-color: blueviolet;
-  order: 2;
-}
-
-.box:nth-child(6) {
-  background-color: aqua;
-  order: -1;
-} */
