@@ -5,7 +5,7 @@
   column-gap: 20px;
   justify-content: center;
   flex-flow: row wrap;
-  align-content: center;
+  align-items: center;
 }
 
 .box {
@@ -18,3 +18,21 @@
   justify-content: center;
   align-items: center;
 }
+
+.box:first-child {
+  align-self: flex-start;
+}
+
+.box:last-child {
+  align-self: flex-end;
+}
+
+/* .box:nth-child(3) {
+  background-color: blueviolet;
+  order: 2;
+}
+
+.box:nth-child(6) {
+  background-color: aqua;
+  order: -1;
+} */
