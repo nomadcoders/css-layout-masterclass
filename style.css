@@ -19,3 +19,16 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.child:last-child {
+  background-color: turquoise;
+  /* grid-column-start: 2;
+  grid-column-end: -1; */
+  grid-column: 2 / -1;
+}
+
+.child:first-child {
+  /* grid-row-start: 1;
+  grid-row-end: -1; */
+  grid-row: 1 / -1;
+}
