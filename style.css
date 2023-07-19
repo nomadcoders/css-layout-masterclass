@@ -20,15 +20,22 @@ body {
   justify-content: center;
 }
 
-.child:last-child {
-  background-color: turquoise;
-  /* grid-column-start: 2;
-  grid-column-end: -1; */
-  grid-column: potato / brocoli;
+.child:first-child {
+  /*
+  grid-row-start: 1;
+  grid-row-end: -1; 
+  grid-row: korea / greece;
+  grid-row: span 2;
+  */
+  background-color: khaki;
 }
 
-.child:first-child {
-  /* grid-row-start: 1;
-  grid-row-end: -1; */
-  grid-row: korea / greece;
+.child:last-child {
+  background-color: turquoise;
+  grid-column: potato / span 2;
+  /*
+  grid-column-start: 2;
+  grid-column-end: -1; 
+  grid-column: potato / brocoli;
+  */
 }
