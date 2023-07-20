@@ -9,16 +9,13 @@ body {
   display: grid;
   gap: 10px;
   height: 100vh;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(2, 100px);
-  background-color: lightblue;
-  place-content: start end;
+  grid-template-columns: repeat(3, minmax(300px, 350px));
 }
 
 .child {
   background-color: tomato;
   color: white;
-  font-size: 28px;
+  font-size: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
