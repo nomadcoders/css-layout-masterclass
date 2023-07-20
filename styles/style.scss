@@ -1,29 +1,28 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  padding: 60px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  gap: 10px;
-  li {
-    background-color: tomato;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 7px;
-    &:hover {
-      opacity: 0.8;
-      a {
-        color: gray;
-      }
-    }
+%alert {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px dashed black;
+}
 
-    a {
-      text-decoration: none;
-      color: white;
-      text-transform: uppercase;
-    }
-  }
+.success {
+  @extend %alert;
+  background-color: green;
+}
+
+.error {
+  @extend %alert;
+  background-color: tomato;
+}
+
+.warning {
+  @extend %alert;
+  background-color: yellow;
 }
