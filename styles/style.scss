@@ -1,26 +1,46 @@
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
+
+@mixin smallDevice {
+  @media screen and (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin mediumDevice {
+  @media screen and (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin largeDevice {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xlDevice {
+  @media screen and (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  @include smallDevice {
+    background-color: blue;
+  }
 
-  padding: 60px;
-}
+  @include mediumDevice {
+    background-color: red;
+  }
 
-@mixin alert($bgColor, $borderColor) {
-  background-color: $bgColor;
-  margin: 10px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: 1px dashed $borderColor;
-}
+  @include largeDevice {
+    background-color: purple;
+  }
 
-.success {
-  @include alert(green, blue);
-}
-
-.error {
-  @include alert(tomato, white);
-}
-
-.warning {
-  @include alert(yellow, black);
+  @include xlDevice {
+    background-color: pink;
+  }
 }
