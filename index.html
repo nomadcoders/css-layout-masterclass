@@ -7,60 +7,46 @@
     <title>CSS Layout Masterclass</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="header__nav">
-        <ul>
-          <li class="header__tab">🔥</li>
-          <li class="header__tab">Best Sellers</li>
-          <li class="header__tab">Hand Soap</li>
-          <li class="header__tab">Shampoo</li>
-          <li class="header__tab">Body Lotion</li>
-          <li class="header__tab">Grid</li>
-          <li class="header__tab">Brush</li>
-          <li class="header__tab">Soap</li>
-          <li class="header__tab">Towel</li>
-          <li class="header__tab">👩🏻‍🔧</li>
-          <li class="header__tab">🛍️</li>
-        </ul>
-      </nav>
-      <div class="header__breadcrumbs">
-        <span class="header__crumb">Home /</span>
-        <span class="header__crumb">Catalog /</span>
-        <span class="header__crumb">Shop /</span>
-        <span class="header__crumb">Shampoo</span>
-      </div>
-    </header>
-    <section class="product">
-      <div class="product__img"></div>
-      <div class="product__info">
-        <div class="product__header">
-          <span class="product__category">Hand Soap</span>
-          <h1 class="product__title">Shampoo for Hair</h1>
-          <div class="product__add-to-cart">
-            <div class="product__qty">
-              <span class="product__minus">-</span>
-              <span class="product__total-qty">1</span>
-              <span class="product__plus">+</span>
-            </div>
-            <span class="product__price">$11,89</span>
+    <div class="wrapper">
+      <div class="grid">
+        <header class="header">
+          <div class="header__top">
+            <span class="header__reviews">4.98</span>
+            <span class="header__label">Best reviews</span>
           </div>
+          <h1 class="header__title">Grid!</h1>
+          <h3 class="header__subtitle">
+            Css grid is awesome and we love it because we can make many things.
+          </h3>
+        </header>
+        <div class="grid__img"></div>
+        <nav class="nav">
+          <ul>
+            <li class="nav__item">About</li>
+            <li class="nav__item">Solutions</li>
+            <li class="nav__item">Portfolio</li>
+            <li class="nav__item">Blog</li>
+          </ul>
+          <span class="nav__cta">Hire Us</span>
+        </nav>
+        <div class="grid__cell">
+          <span>Recent collabs</span>
         </div>
-        <div class="product__footer">
-          <div class="product__description">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-              quam eaque deserunt. Ullam, dignissimos corrupti officia
-              voluptatum facilis iusto accusamus! Dolorum excepturi quae placeat
-              quasi ex magni assumenda ullam blanditiis.
-            </p>
-          </div>
-          <div class="product__faq">
-            <div class="product__question">How to use<span>+</span></div>
-            <div class="product__question">Ingredients<span>+</span></div>
-            <div class="product__question">Shipping<span>+</span></div>
-          </div>
+        <div class="grid__cell">
+          <span>Recent collabs</span>
+        </div>
+        <div class="grid__img"></div>
+        <div class="grid__img"></div>
+        <div class="grid__img"></div>
+        <div class="blog-post">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias modi
+            nobis voluptatum dolorem vitae minus odit quasi ducimus id aut,
+            repellat molestiae maxime ullam magni atque inventore praesentium
+            facere totam.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
   </body>
 </html>
