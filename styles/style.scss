@@ -1,141 +1,116 @@
 @import "./reset.scss";
 
-$bg: #e4e5e9;
-$black: #393e44;
-$red: #e21a00;
-$grey: #cbcfd2;
-$blue: #392aa9;
-$darkGrey: #7f848a;
-$yellow: #edc212;
+$bg: #f0f0f0;
+$accent: #c7c2cc;
+$borderWidth: 2px;
+
+@keyframes slide {
+  0% {
+    transform: translateY(-3000%) rotateZ(90deg);
+  }
+  100% {
+    transform: translateY(calc(0% - 65px)) rotateZ(90deg);
+  }
+}
 
 body {
+  display: grid;
+  gap: $borderWidth;
+  background-color: black;
+  grid-template-rows: 10fr 10fr 45fr 35fr;
+  grid-template-columns: 0.3fr repeat(4, 1fr);
   height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  background-color: $black;
-  color: $black;
-  gap: 2px;
-}
-
-.info {
-  display: grid;
-  gap: 2px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  .info__hd,
-  .info__space,
-  .info__settings {
+  div {
     background-color: $bg;
-  }
-  .info__space {
-    grid-row: 1 / span 2;
-    grid-column: 2 / span 2;
-  }
-  .info__settings {
-    grid-row: 3 / span 2;
-    grid-column: 2 / span 2;
-  }
-  .info__hd {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    .hd__discs {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      div:first-child {
-        height: 110px;
-        width: 110px;
-        border-radius: 50%;
-        background-color: #393e44;
-      }
-      div:last-child {
-        height: 22px;
-        width: 22px;
-        border-radius: 11px;
-        background-color: $bg;
-        position: absolute;
-      }
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
-    .hd__footer {
-      width: 80%;
-      display: flex;
-      justify-content: space-between;
-      .hd__full {
-        display: flex;
-        align-items: center;
-        gap: 2.5px;
-        justify-content: space-between;
-        span {
-          height: 5px;
-          width: 5px;
-          border-radius: 2.5px;
-          background-color: $black;
-        }
-      }
+    &:nth-child(11) {
+      grid-column: span 3;
     }
   }
-  .info__settings {
+  .logo {
+    grid-area: span 2 / span 2;
+    font-size: 198px;
     display: flex;
-    flex-direction: column;
-    gap: 50px;
-    justify-content: center;
     align-items: center;
-    font-size: 28px;
-    font-weight: 300;
+    justify-content: center;
   }
-  .info__space {
+  .title {
+    grid-column: span 3;
+    font-size: 66px;
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner {
+    grid-row: span 2;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    position: relative;
+    span {
+      position: absolute;
+      width: max-content;
+      color: white;
+      font-weight: 600;
+      font-size: 26px;
+      animation: slide 5s linear infinite;
+    }
+  }
+  .nav-btn {
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
     flex-direction: column;
-    gap: 50px;
-    .info__space-item {
-      h3 {
-        text-transform: uppercase;
+    gap: 5px;
+    .nav-btn__name {
+      font-weight: 600;
+      font-size: 24px;
+      .nav-btn__desc {
         font-size: 18px;
-        font-weight: 300;
-      }
-      h2 {
-        font-size: 144px;
       }
     }
   }
-}
-
-.stats {
-  display: grid;
-  grid-template-rows: 2fr 1fr 1.5fr 2.5fr 3.5fr;
-  .stats__stat {
+  .post {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     padding: 20px;
-    color: $black;
-    &:first-child {
+    &.post--big {
+      .post__title {
+        font-size: 248px;
+      }
+    }
+    .post__title {
+      font-size: 44px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 22px;
+    }
+  }
+  .featured {
+    background-color: $accent;
+    padding: 50px;
+    display: flex;
+    div {
+      border: $borderWidth solid black;
       background-color: $bg;
-    }
-    &:nth-child(2) {
-      background-color: $yellow;
-    }
-    &:nth-child(3) {
-      background-color: $darkGrey;
-    }
-    &:nth-child(4) {
-      background-color: $red;
-      color: white;
-    }
-    &:nth-child(5) {
-      background-color: $blue;
-      color: white;
-    }
-    .stat__info {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      font-size: 20px;
-      font-weight: 300;
-      text-transform: uppercase;
+      justify-content: center;
+      h3 {
+        text-align: center;
+        font-size: 48px;
+        font-weight: 600;
+      }
     }
   }
 }
