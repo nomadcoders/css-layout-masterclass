@@ -1,7 +1,9 @@
 @import "./reset.scss";
 
-$white: #dee1d6;
-$green: #5ebc44;
+$bg: #dde1d3;
+$blue: #00a0c8;
+$red: #d03022;
+$burntRed: #573533;
 
 body {
   background-color: black;
@@ -12,48 +14,49 @@ body {
 }
 
 .poster {
-  background-color: $green;
   width: 37%;
   height: 100%;
   display: grid;
-  grid-template-rows: 30fr 70fr;
-  .top {
-    display: grid;
-    padding: 25px;
-    row-gap: 25px;
-    grid-template-columns: 75fr 25fr;
-    .top__box {
-      display: flex;
-      gap: 10px;
-      flex-direction: column;
-      font-weight: 600;
-      font-size: 18px;
-      &:last-child {
-        color: white;
-        font-size: 22px;
-        align-self: center;
-      }
-      h1 {
-        font-size: 148px;
-      }
-    }
+  grid-template-columns: 90px 1fr 90px;
+  grid-template-rows: 90px 1.2fr 90px 1fr 90px 1.2fr 90px;
+  background-color: $bg;
+  padding: 20px;
+  box-sizing: border-box;
+  .top-left,
+  .top-right,
+  .top-top,
+  .center-bottom {
+    background-color: $blue;
   }
-  .bottom {
-    overflow: hidden;
-    .circles {
-      transform: scale(1.1);
-      background-color: black;
-      display: grid;
-      gap: 5px;
-      height: 100%;
-      grid-template: repeat(11, 1fr) / repeat(11, 1fr);
-      .circle {
-        background-color: $green;
-        border-radius: 50%;
-        &:nth-child(3n) {
-          background-color: white;
-        }
-      }
-    }
+  .center-top,
+  .bottom-left,
+  .bottom-right,
+  .bottom-bottom {
+    background-color: $red;
+  }
+  .center-left,
+  .center-right {
+    background-color: $burntRed;
+  }
+  .top-left,
+  .top-right,
+  .bottom-left,
+  .bottom-right {
+    grid-row: span 2;
+  }
+  .center-left,
+  .center-right {
+    grid-row: span 3;
+  }
+  h1 {
+    font-size: 78px;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    gap: 10px;
+    font-weight: 600;
   }
 }
